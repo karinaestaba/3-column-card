@@ -1,18 +1,14 @@
-\:root
-  --bright-orange: hsl(31, 77%, 52%)
-  --dark-cyan: hsl(184, 100%, 22%)
-  --very-dark-cyan: hsl(179, 100%, 13%)
-
-  --transparent-white: hsla(0, 0%, 100%, 0.75)
-  --very-light-gray: hsl(0, 0%, 95%)
-
-  --font-size: 15px
-  --line-height: 24px
-  --font-family-primary: 'Lexend Deca', sans-serif
-  --font-family-secondary: 'Big Shoulders Display', cursive
-
-  --padding: 2.8rem
-  --border-radius: .5rem
+$bright-orange: hsl(31, 77%, 52%)
+$dark-cyan: hsl(184, 100%, 22%)
+$very-dark-cyan: hsl(179, 100%, 13%)
+$transparent-white: hsla(0, 0%, 100%, 0.75)
+$very-light-gray: hsl(0, 0%, 95%)
+$font-size: 15px
+$line-height: 24px
+$font-family-primary: 'Lexend Deca', sans-serif
+$font-family-secondary: 'Big Shoulders Display', cursive
+$padding: 2.8rem
+$border-radius: .5rem
 
 *,
 *::after,
@@ -24,7 +20,7 @@
 html,
 body
   min-height: 100vh
-  background-color: var(--very-light-gray)
+  background-color: $very-light-gray
 
 body
   height: 100%
@@ -37,25 +33,25 @@ body,
 p,
 h2,
 button
-  font-family: var(--font-family-primary)
-  font-size: var(--font-size)
-  line-height: var(--line-height)
+  font-family: $font-family-primary
+  font-size: $font-size
+  line-height: $line-height
 
 p
-  color: var(--transparent-white)
+  color: $transparent-white
 
 h2
-  color: var(--very-light-gray)
+  color: $very-light-gray
   font-size: 38px
   text-transform: uppercase
-  font-family: var(--font-family-secondary)
+  font-family: $font-family-secondary
   padding: 41px 8px 34px
   line-height: 1
 
 .main-container
   max-width: 1440px
   margin: 0 auto
-  padding: calc(var(--padding) * 2) calc(var(--padding)/2)
+  padding: calc($padding * 2) calc($padding/2)
   display: flex
   justify-content: center
   align-items: center
@@ -69,28 +65,28 @@ h2
     text-align: left
 
   &-single
-    padding: var(--padding)
+    padding: $padding
     display: grid
     grid-template-areas: "c-content" "c-footer"
     grid-template-rows: 1fr minmax(70px, auto)
 
   &-sedan
-    background-color: var(--bright-orange)
+    background-color: $bright-orange
 
     .card-cta
-      color: var(--bright-orange)
+      color: $bright-orange
 
   &-suvs
-    background-color: var(--dark-cyan)
+    background-color: $dark-cyan
 
     .card-cta
-      color: var(--dark-cyan)
+      color: $dark-cyan
 
   &-luxury
-    background-color: var(--very-dark-cyan)
+    background-color: $very-dark-cyan
 
     .card-cta
-      color: var(--very-dark-cyan)
+      color: $very-dark-cyan
 
   &-content
     grid-area: c-content
@@ -108,21 +104,21 @@ h2
     padding: 12px 29px
     display: inline-block
     margin: 0
-    background-color: var(--very-light-gray)
+    background-color: $very-light-gray
     text-decoration: none
-    border: 1px solid var(--very-light-gray)
+    border: 1px solid $very-light-gray
     border-radius: 2rem
     transition: all 1s
 
     &:hover
       background-color: transparent
-      color: var(--very-light-gray)
+      color: $very-light-gray
       transition: all 1s
 
 .main-footer
   grid-area: foot
   min-height: 65px
-  color: var(--very-dark-cyan)
+  color: $very-dark-cyan
   text-align: center
   font-size: 12px
   line-height: 1.1
@@ -135,13 +131,13 @@ h2
   a
     display: inline-block
     margin-left: 2px
-    color: var(--dark-cyan)
+    color: $dark-cyan
     text-decoration: none
 
 @media screen and (min-width: 992px)
   .main-container
     height: 100%
-    padding: var(--padding)
+    padding: $padding
     margin-top: 14px
 
   .card
@@ -154,12 +150,12 @@ h2
       grid-template-rows: 1fr minmax(120px, auto)
 
       &:first-child
-        border-top-left-radius: var(--border-radius)
-        border-bottom-left-radius: var(--border-radius)
+        border-top-left-radius: $border-radius
+        border-bottom-left-radius: $border-radius
 
       &:last-child
-        border-top-right-radius: var(--border-radius)
-        border-bottom-right-radius: var(--border-radius)
+        border-top-right-radius: $border-radius
+        border-bottom-right-radius: $border-radius
 
     &-footer
       padding: 1px 7px
